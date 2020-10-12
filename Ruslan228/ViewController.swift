@@ -75,9 +75,10 @@ class ViewController: UIViewController {
             present(alert, animated: true, completion: nil)
             
             print("Name format is wrong")
+            label.text = nil 
         } else {
             label.text = textField.text
-            label.text = nil 
+         
         }
     }
 }
