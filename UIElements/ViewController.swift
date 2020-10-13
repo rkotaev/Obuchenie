@@ -1,14 +1,15 @@
 //
 //  ViewController.swift
-//  Ruslan228
+//  UIElements
 //
-//  Created by Project K Developer on 05.10.2020.
+//  Created by Debash on 07.05.2018.
+//  Copyright © 2018 swiftbook.ru. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
@@ -17,10 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        slider.value = 1  
+        slider.value = 1
         
         label.text = String(slider.value)
-        //  label.font = label.font.withSize(35)
+        label.font = label.font.withSize(35)
         label.textAlignment = .center
         label.numberOfLines = 2
         
@@ -31,26 +32,24 @@ class ViewController: UIViewController {
         slider.minimumTrackTintColor = .yellow
         slider.maximumTrackTintColor = .red
         slider.thumbTintColor = .blue
-        
     }
-    
+
     @IBAction func choiceSegment(_ sender: UISegmentedControl) {
         
         label.isHidden = false
-        label.numberOfLines = 2
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            label.text = "Вы выбрали первый сегмент"
+            label.text = "The first segment is selected"
             label.textColor = .red
         case 1:
-            label.text = "Вы выбрали второй сегмент"
+            label.text = "The second segment is selected"
             label.textColor = .blue
         case 2:
-            label.text = "Вы выбрали третий сегмент"
+            label.text = "The third segment is selected"
             label.textColor = .yellow
         default:
-            print("Не сработало")
+            print("Sothing wrong!")
         }
     }
     
@@ -64,22 +63,26 @@ class ViewController: UIViewController {
     
     @IBAction func donePressed(_ sender: UIButton) {
         
-        guard textField.text?.isEmpty == false else  { return }
+        guard textField.text?.isEmpty == false else { return }
         
         if let _ = Double(textField.text!) {
             
-            let alert = UIAlertController(title: "Wrong Format", message: "Please enter your name", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Wrong format", message: "Please enter your name", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
             
             print("Name format is wrong")
-            label.text = nil 
+            
         } else {
+            
             label.text = textField.text
-         
+            textField.text = nil
         }
+        
+        
     }
+    
 }
 
