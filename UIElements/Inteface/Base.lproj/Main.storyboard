@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPw-Rs-NIU">
-                                <rect key="frame" x="4" y="41" width="366" height="839"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPw-Rs-NIU">
+                                <rect key="frame" x="4" y="21" width="367" height="859"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I4t-I4-m6f">
                                         <rect key="frame" x="70" y="20" width="227" height="28"/>
@@ -36,7 +33,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzZ-l5-at8">
-                                        <rect key="frame" x="8" y="141" width="350" height="21"/>
+                                        <rect key="frame" x="8.5" y="141" width="350" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="zBI-rE-wce"/>
                                         </constraints>
@@ -55,12 +52,12 @@
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Uz-e4-EPF">
-                                        <rect key="frame" x="70" y="353" width="227" height="30"/>
+                                        <rect key="frame" x="70" y="353" width="227" height="34"/>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN1-Fd-GHy">
-                                        <rect key="frame" x="70" y="460" width="227" height="30"/>
+                                        <rect key="frame" x="70" y="464" width="227" height="30"/>
                                         <color key="backgroundColor" red="0.076508276164531708" green="0.63621586561203003" blue="0.81317967176437378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Done"/>
@@ -77,7 +74,6 @@
                                     <constraint firstItem="gzZ-l5-at8" firstAttribute="top" secondItem="I4t-I4-m6f" secondAttribute="bottom" constant="94" id="Xau-ku-GdB"/>
                                     <constraint firstItem="gzZ-l5-at8" firstAttribute="centerX" secondItem="DuQ-JK-vj2" secondAttribute="centerX" id="YRc-ww-1pS"/>
                                     <constraint firstItem="3Uz-e4-EPF" firstAttribute="trailing" secondItem="SN1-Fd-GHy" secondAttribute="trailing" id="aqW-g5-dNx"/>
-                                    <constraint firstAttribute="bottom" secondItem="SN1-Fd-GHy" secondAttribute="bottom" constant="349" id="bqf-IZ-TuW"/>
                                     <constraint firstItem="3Uz-e4-EPF" firstAttribute="top" secondItem="DuQ-JK-vj2" secondAttribute="bottom" constant="91" id="eld-ji-GcM"/>
                                     <constraint firstItem="3Uz-e4-EPF" firstAttribute="leading" secondItem="SN1-Fd-GHy" secondAttribute="leading" id="fen-NI-udb"/>
                                     <constraint firstItem="DuQ-JK-vj2" firstAttribute="top" secondItem="gzZ-l5-at8" secondAttribute="bottom" constant="71" id="lET-7G-EVX"/>
@@ -88,18 +84,34 @@
                                     <constraint firstItem="I4t-I4-m6f" firstAttribute="centerX" secondItem="LPw-Rs-NIU" secondAttribute="centerX" id="znt-a5-Ixo"/>
                                 </constraints>
                             </scrollView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bIf-ic-sQV">
+                                <rect key="frame" x="0.0" y="608" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="TfB-bu-wpa"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="ru"/>
+                                <connections>
+                                    <action selector="changeDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rcb-Xc-w14"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.5725490196078431" green="0.91764705882352937" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="bIf-ic-sQV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="608" id="BTU-NX-PoZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bIf-ic-sQV" secondAttribute="bottom" constant="130" id="HaG-ar-EIN"/>
                             <constraint firstItem="LPw-Rs-NIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KLt-Sd-ntd"/>
                             <constraint firstItem="LPw-Rs-NIU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="L8l-aN-arm"/>
+                            <constraint firstItem="bIf-ic-sQV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PUP-y3-kUa"/>
+                            <constraint firstItem="bIf-ic-sQV" firstAttribute="centerX" secondItem="LPw-Rs-NIU" secondAttribute="centerX" id="Tj6-Z8-Lp4"/>
                             <constraint firstAttribute="bottom" secondItem="LPw-Rs-NIU" secondAttribute="bottom" constant="20" symbolic="YES" id="Yvv-f4-K9y"/>
+                            <constraint firstItem="bIf-ic-sQV" firstAttribute="top" secondItem="SN1-Fd-GHy" secondAttribute="bottom" constant="93" id="aCB-3Y-B7R"/>
                             <constraint firstItem="LPw-Rs-NIU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="yKC-Kd-86r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
+                        <outlet property="datePicker" destination="bIf-ic-sQV" id="aLR-i1-sHW"/>
                         <outlet property="label" destination="gzZ-l5-at8" id="PMr-R9-EwB"/>
                         <outlet property="segmentedControl" destination="I4t-I4-m6f" id="cg7-xx-oge"/>
                         <outlet property="slider" destination="DuQ-JK-vj2" id="CTm-dA-GF2"/>
@@ -108,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.484257871064472"/>
+            <point key="canvasLocation" x="-506" y="21"/>
         </scene>
     </scenes>
 </document>
